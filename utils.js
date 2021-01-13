@@ -9,12 +9,15 @@ export function gametime(hiddenNumber, guessInput) {
     if (hiddenNumber > guessInput.value) {
         replyBox.textContent = 'Higher';
         remainingGuessesEl.textContent = remainingGuesses;
+        return 1;
     } else if (hiddenNumber < guessInput.value) {
         replyBox.textContent = 'Lower';
         remainingGuessesEl.textContent = remainingGuesses;
-    } else if (hiddenNumber == guessInput.value) {
+        return -1;
+    } else if (Number.hiddenNumber === Number.guessInput) {
         replyBox.textContent = 'Correct';
         replyBox.style.fontSize = '2rem';
+        return 0;
     }
 }
 
@@ -23,17 +26,3 @@ export function gametime(hiddenNumber, guessInput) {
 
 
 
-
-
-
-
-//     if (hiddenNumber > guessInput.value) {
-//     replyBox.textContent = 'Higher';
-//     remainingGuessesEl.textContent = remainingGuesses;
-// } else if (hiddenNumber < guessInput.value) {
-//     replyBox.textContent = 'Lower';
-//     remainingGuessesEl.textContent = remainingGuesses;
-// } else if (hiddenNumber == guessInput.value) {
-//     replyBox.textContent = 'Correct';
-//     replyBox.style.fontSize = '2rem';
-// }

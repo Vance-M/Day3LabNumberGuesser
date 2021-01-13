@@ -25,23 +25,10 @@ compGuess.addEventListener('click', () => {
 
     remainingGuesses--;
 
+    console.log(hiddenNumber);
     console.log(remainingGuesses);
 
-    console.log(hiddenNumber);
-
     gametime(hiddenNumber, guessInput);
-
-    // if (hiddenNumber > guessInput.value) {
-    //     replyBox.textContent = 'Higher';
-    //     remainingGuessesEl.textContent = remainingGuesses;
-    // } else if (hiddenNumber < guessInput.value) {
-    //     replyBox.textContent = 'Lower';
-    //     remainingGuessesEl.textContent = remainingGuesses;
-    // } else if (hiddenNumber == guessInput.value) {
-    //     replyBox.textContent = 'Correct';
-    //     replyBox.style.fontSize = '2rem';
-    // }
-
 
 
 });
