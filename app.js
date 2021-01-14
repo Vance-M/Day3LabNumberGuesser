@@ -22,13 +22,20 @@ export { remainingGuesses };
 
 
 compGuess.addEventListener('click', () => {
-
+    console.log(hiddenNumber)
+    console.log(guessInput.value)
     remainingGuesses--;
-
-    console.log(hiddenNumber);
-    console.log(remainingGuesses);
-
-    gametime(hiddenNumber, guessInput);
+    const results = gametime(hiddenNumber, Number(guessInput.value));
+    if (results === 1) {
+        replyBox.textContent = 'Higher';
+        remainingGuessesEl.textContent = remainingGuesses;
+    } else if (results === -1) {
+        replyBox.textContent = 'Lower';
+        remainingGuessesEl.textContent = remainingGuesses;
+    } else if (results === 0) {
+        replyBox.textContent = 'Correct';
+        remainingGuessesEl.textContent = remainingGuesses;
+    }
 
 
 });
