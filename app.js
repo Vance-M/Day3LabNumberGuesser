@@ -22,8 +22,6 @@ export { remainingGuesses };
 
 
 compGuess.addEventListener('click', () => {
-    console.log(hiddenNumber)
-    console.log(guessInput.value)
     remainingGuesses--;
     const results = gametime(hiddenNumber, Number(guessInput.value));
     if (results === 1) {
